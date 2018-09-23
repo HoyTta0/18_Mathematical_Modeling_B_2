@@ -24,7 +24,7 @@ load 18_B.mat a city D_2  population
 % population(11)=23.0;
 % population(12)=38.31;
 
-best_f=0;
+best_f=0; %最大网络价值
 f=0;
 best_p=0;
 p=0;
@@ -35,8 +35,8 @@ best_load=0;
 
 while t>=tf
             for j=1:Markov
-                p = randperm(46,16);
-                % p=randi([1 46],1,16);
+                p = randperm(46,16);   %存在中间节点，两个节点一条连接
+                % p=randi([1 46],1,16); %存在中间节点，两个节点任意连接
                 p_flag(1:12) = 0;
                 p_a = a;
 
